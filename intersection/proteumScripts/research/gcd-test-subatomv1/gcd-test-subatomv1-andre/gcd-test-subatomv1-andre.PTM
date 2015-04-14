@@ -1,0 +1,10 @@
+PROTEUM - PROGRAM TEST FILE
+Mar-15-15
+V 2.1 - IM
+              
+gcd-test-subatomv1
+gcd-test-subatomv1.exe
+gcc gcd-test-subatomv1.c -o gcd-test-subatomv1.exe -w
+Research
+<N O  A N O M A L I E S>
+<A L L   F U N C T I O N S>

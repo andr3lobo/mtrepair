@@ -1,0 +1,54 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: three-step-andre
+[]----------------------------------------------------------
+[]   SOURCE FILE: three-step
+[]
+[]   TOTAL MUTANTS: 2216
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 2216
+[]
+[]   ALIVE MUTANTS: 1814
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.181408
+[]
+[]   OPERATORS:
+[]   u-Cccr             54    u-CCDL              6    u-Ccsr            399    
+[]   u-CRCR            285    u-OAAN            104    u-OABN             78    
+[]   u-OALN             52    u-OARN            156    u-OASN             52    
+[]   u-OCNG              6    u-OEAA             15    u-OEBA              9    
+[]   u-OESA              6    u-OODL             76    u-ORAN             60    
+[]   u-ORBN             36    u-ORLN             24    u-ORRN             60    
+[]   u-ORSN             24    u-SRSR             22    u-SSDL             22    
+[]   u-STRI             12    u-STRP             22    u-VDTR            171    
+[]   u-VLSR            300    u-VTWD            114    u-VVDL             51    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 414
+	Number of Mutants Dead by Stdout: 353
+	Number of Mutants Dead by Retcode : 14
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 35
+	Number of Mutants Avoided: 1400
+	Number of Dead Mutants: 402
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 1
+	Parameters: 666 
+	Input:
+
+	Output:
+666:0:0:1
+
+	Stderr:
+
+_________________________________________________

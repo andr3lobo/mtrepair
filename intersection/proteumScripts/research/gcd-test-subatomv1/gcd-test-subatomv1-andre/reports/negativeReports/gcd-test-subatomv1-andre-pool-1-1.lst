@@ -1,0 +1,53 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: gcd-test-subatomv1-andre
+[]----------------------------------------------------------
+[]   SOURCE FILE: gcd-test-subatomv1
+[]
+[]   TOTAL MUTANTS: 368
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 368
+[]
+[]   ALIVE MUTANTS: 91
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.752717
+[]
+[]   OPERATORS:
+[]   u-Cccr             10    u-CCDL              2    u-CRCR             70    
+[]   u-OAAN              6    u-OALN              4    u-OARN             12    
+[]   u-OCNG              3    u-OEAA             16    u-OODL             10    
+[]   u-ORAN             12    u-ORLN              6    u-ORRN             15    
+[]   u-SMTC              1    u-SMTT              1    u-SMVB              1    
+[]   u-SRSR             32    u-SSDL             17    u-STRI              4    
+[]   u-STRP             17    u-SWDD              1    u-VDTR             30    
+[]   u-VLSR             70    u-VTWD             20    u-VVDL              8    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 69
+	Number of Mutants Dead by Stdout: 143
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 106
+	Number of Mutants Dead by Trap: 28
+	Number of Mutants Avoided: 22
+	Number of Dead Mutants: 277
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 1071 1029 
+	Input:
+
+	Output:
+42
+
+	Stderr:
+
+_________________________________________________

@@ -1,0 +1,6 @@
+muta -l cal-andre | ../../../scripts/mutop > cal-andre-op.txt
+
+caso o comando acima nao funcione, dentro da pasta scripts devo:
+1) apagar o executavel mutop.exe
+2) gerar um novo executavel com o comando:
+	gcc mutop.c -o mutop

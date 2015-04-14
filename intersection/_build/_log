@@ -1,0 +1,8 @@
+### Starting build.
+# Target: searchMutants.ml.depends, tags: { bin_annot, debug, extension:ml, file:searchMutants.ml, ocaml, ocamldep, package(bin_prot.syntax), package(core), package(sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax), quiet, short_paths, syntax(camlp4o), thread }
+ocamlfind ocamldep -syntax camlp4o -package bin_prot.syntax -package sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -package core -modules searchMutants.ml > searchMutants.ml.depends
+# Target: searchMutants.cmo, tags: { bin_annot, byte, compile, debug, extension:cmo, extension:ml, file:searchMutants.cmo, file:searchMutants.ml, implem, ocaml, package(bin_prot.syntax), package(core), package(sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax), quiet, short_paths, syntax(camlp4o), thread }
+ocamlfind ocamlc -c -w A-4-33-40-41-42-43-34-44 -strict-sequence -g -bin-annot -short-paths -thread -syntax camlp4o -package bin_prot.syntax -package sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -package core -o searchMutants.cmo searchMutants.ml
+# Target: searchMutants.byte, tags: { bin_annot, byte, debug, dont_link_with, extension:byte, file:searchMutants.byte, link, ocaml, package(bin_prot.syntax), package(core), package(sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax), program, quiet, short_paths, syntax(camlp4o), thread }
+ocamlfind ocamlc -linkpkg -g -thread -syntax camlp4o -package bin_prot.syntax -package sexplib.syntax,comparelib.syntax,fieldslib.syntax,variantslib.syntax -package core searchMutants.cmo -o searchMutants.byte
+# Compilation successful.

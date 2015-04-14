@@ -1,0 +1,5 @@
+0     /* mutante equivalente */
+1     /* mutação alcançada e o mutante permaneceu vivo */
+2-5     /* mutante morto e os números de 2 a 5 indicam a causa da morte */
+6     /* caso de teste não alcançou o ponto de mutação, portanto, mutante vivo */
+7     /* desprezar - mutante anomalo */

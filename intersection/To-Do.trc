@@ -1,0 +1,10 @@
+1) The proteum reports have the folowing layout: 
+Mutant # | Executed | Avoided | Not Executed | Killed | Total
+-------------------------------------------------------------
+2 2 1 1 1 
+2 1 2 1 1 
+TOTAL    | 3545     | 7535    | 0            | 1685   | 11080 
+
+The first, second and last line aren't need to extract the intersect mutants. I delete manually these lines in reports used (directory: proteumReports/ ), but I should a program to automatize this, before the intersect extraction.
+
+

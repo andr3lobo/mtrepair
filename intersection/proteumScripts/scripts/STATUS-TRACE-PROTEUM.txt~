@@ -1,0 +1,15 @@
+#define		NO_EXEC			0 /* nao executado ainda*/
+#define		EXEC_VIVO		1 /* executado e vivo */
+#define		EXEC_MORTO_SAIDA	2 /* por resultados diferentes */
+#define		EXEC_MORTO_RETCOD	3 /* por ret. code diferentes */
+#define		EXEC_MORTO_TIMEOUT 	4 /* por timeout */
+#define		EXEC_MORTO_TRAP		5 /* por funcao TRAP */
+#define		AVOIDED			6 /* execution avoided by tcase log */
+#define		NO_EXEC_COMP		7 /* mutante anomalo */
+
+
+0 	/* mutante equivalente */
+1 	/* mutação alcançada e o mutante permaneceu vivo */
+2-5 	/* mutante morto e os números de 2 a 5 indicam a causa da morte */
+6 	/* caso de teste não alcançou o ponto de mutação, portante, mutante vivo */
+7 	/* desprezar - mutante anomalo */
