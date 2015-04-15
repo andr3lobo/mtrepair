@@ -1,0 +1,79 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: grade-w-1-003
+[]----------------------------------------------------------
+[]   SOURCE FILE: grade
+[]
+[]   TOTAL MUTANTS: 264
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 264
+[]
+[]   ALIVE MUTANTS: 2
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.992424
+[]
+[]   OPERATORS:
+[]   u-CRCR             56    u-OCNG              4    u-OODL              8    
+[]   u-ORAN             16    u-ORLN              8    u-ORRN             20    
+[]   u-SRSR             14    u-SSDL             15    u-STRI              8    
+[]   u-STRP             15    u-VDTR             24    u-VLSR             52    
+[]   u-VTWD             16    u-VVDL              8    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 9
+	Number of Mutants Dead by Stdout: 227
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 26
+	Number of Mutants Avoided: 2
+	Number of Dead Mutants: 253
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 90 80 70 60 65 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) >Student has an A grade
+Student has an B grade
+Student has an D grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 2
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 236
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 25
+	Number of Mutants Avoided: 3
+	Number of Dead Mutants: 261
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 90 80 70 60 60 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) >Student has an A grade
+Student has an D grade
+
+	Stderr:
+
+_________________________________________________

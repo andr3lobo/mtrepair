@@ -1,0 +1,27 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: grade-b-1-003
+[]----------------------------------------------------------
+[]   SOURCE FILE: grade
+[]
+[]   TOTAL MUTANTS: 264
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 264
+[]
+[]   ALIVE MUTANTS: 264
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.000000
+[]
+[]   OPERATORS:
+[]   u-CRCR             56    u-OCNG              4    u-OODL              8    
+[]   u-ORAN             16    u-ORLN              8    u-ORRN             20    
+[]   u-SRSR             14    u-SSDL             15    u-STRI              8    
+[]   u-STRP             15    u-VDTR             24    u-VLSR             52    
+[]   u-VTWD             16    u-VVDL              8    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]

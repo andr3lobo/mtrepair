@@ -1,0 +1,31 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: digits-w-2-002
+[]----------------------------------------------------------
+[]   SOURCE FILE: digits
+[]
+[]   TOTAL MUTANTS: 91
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 91
+[]
+[]   ALIVE MUTANTS: 91
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.000000
+[]
+[]   OPERATORS:
+[]   u-Cccr              3    u-CCDL              1    u-Ccsr              4    
+[]   u-CRCR             10    u-OAAA              4    u-OAAN              4    
+[]   u-OABA              3    u-OABN              3    u-OAEA              1    
+[]   u-OALN              2    u-OARN              6    u-OASA              2    
+[]   u-OASN              2    u-OCNG              1    u-OODL              3    
+[]   u-SMTC              1    u-SMTT              1    u-SMVB              2    
+[]   u-SRSR              8    u-SSDL              9    u-STRP              9    
+[]   u-SWDD              1    u-VDTR              6    u-VTWD              4    
+[]   u-VVDL              1    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]

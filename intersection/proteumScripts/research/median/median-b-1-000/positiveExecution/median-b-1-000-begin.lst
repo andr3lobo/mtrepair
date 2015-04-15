@@ -1,0 +1,30 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: median-b-1-000
+[]----------------------------------------------------------
+[]   SOURCE FILE: median
+[]
+[]   TOTAL MUTANTS: 845
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 845
+[]
+[]   ALIVE MUTANTS: 845
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.000000
+[]
+[]   OPERATORS:
+[]   u-Ccsr             27    u-CRCR            135    u-OCNG              3    
+[]   u-OLAN             45    u-OLBN             27    u-OLLN              9    
+[]   u-OLNG             27    u-OLRN             54    u-OLSN             18    
+[]   u-OODL             42    u-ORAN             60    u-ORBN             36    
+[]   u-ORLN             24    u-ORRN             60    u-ORSN             24    
+[]   u-SRSR              9    u-SSDL             10    u-STRI              6    
+[]   u-STRP             10    u-VDTR             81    u-VLSR             60    
+[]   u-VTWD             54    u-VVDL             24    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]

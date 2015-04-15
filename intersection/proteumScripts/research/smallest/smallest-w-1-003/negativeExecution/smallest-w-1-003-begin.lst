@@ -1,0 +1,30 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: smallest-w-1-003
+[]----------------------------------------------------------
+[]   SOURCE FILE: smallest
+[]
+[]   TOTAL MUTANTS: 897
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 897
+[]
+[]   ALIVE MUTANTS: 897
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.000000
+[]
+[]   OPERATORS:
+[]   u-Ccsr             28    u-CRCR            140    u-OCNG              4    
+[]   u-OLAN             40    u-OLBN             24    u-OLLN              8    
+[]   u-OLNG             24    u-OLRN             48    u-OLSN             16    
+[]   u-OODL             40    u-ORAN             60    u-ORBN             36    
+[]   u-ORLN             24    u-ORRN             60    u-ORSN             24    
+[]   u-SRSR             15    u-SSDL             19    u-STRI              8    
+[]   u-STRP             19    u-VDTR             84    u-VLSR             96    
+[]   u-VTWD             56    u-VVDL             24    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]

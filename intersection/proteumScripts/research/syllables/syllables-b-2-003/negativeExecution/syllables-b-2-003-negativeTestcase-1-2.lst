@@ -1,0 +1,81 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: syllables-b-2-003
+[]----------------------------------------------------------
+[]   SOURCE FILE: syllables
+[]
+[]   TOTAL MUTANTS: 728
+[]
+[]   ANOMALOUS MUTANTS: 2
+[]
+[]   ACTIVE MUTANTS: 728
+[]
+[]   ALIVE MUTANTS: 406
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.440771
+[]
+[]   OPERATORS:
+[]   u-Cccr             70    u-CCDL              6    u-Ccsr            120    
+[]   u-CRCR             75    u-OAAA              4    u-OABA              3    
+[]   u-OAEA              1    u-OASA              2    u-OCNG              2    
+[]   u-OEAA             15    u-OEBA              9    u-OESA              6    
+[]   u-Oido              1    u-OLAN             25    u-OLBN             15    
+[]   u-OLLN              5    u-OLNG             15    u-OLRN             30    
+[]   u-OLSN             10    u-OODL             26    u-ORAN             35    
+[]   u-ORBN             21    u-ORLN             14    u-ORRN             35    
+[]   u-ORSN             14    u-SMTC              1    u-SMTT              1    
+[]   u-SMVB              1    u-SRSR             11    u-SSDL             12    
+[]   u-STRI              2    u-STRP             12    u-VDTR             45    
+[]   u-VLSR             46    u-VTWD             30    u-VVDL              8    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 410
+	Number of Mutants Dead by Stdout: 214
+	Number of Mutants Dead by Retcode : 40
+	Number of Mutants Dead by Timeout: 2
+	Number of Mutants Dead by Trap: 38
+	Number of Mutants Avoided: 22
+	Number of Dead Mutants: 294
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 1 1 1 1 
+	Input:
+
+	Output:
+Please enter a string > The number of syllables is 0.
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 2
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 407
+	Number of Mutants Dead by Stdout: 216
+	Number of Mutants Dead by Retcode : 39
+	Number of Mutants Dead by Timeout: 3
+	Number of Mutants Dead by Trap: 39
+	Number of Mutants Avoided: 22
+	Number of Dead Mutants: 297
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 2 2 2 3 
+	Input:
+
+	Output:
+Please enter a string > The number of syllables is 0.
+
+	Stderr:
+
+_________________________________________________

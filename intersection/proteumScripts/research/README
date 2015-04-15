@@ -1,0 +1,15 @@
+The test session of the INTROCLASS benchmarks have structure that follow:
+
+/mtrepair/intersection/ProteumScripts/research/checksum 
+
+checksum/checksum-w-1-000          checksum/checksum-b-1-000
+
+checksum: the name of program
+w: identificator of the whitebox test session 
+b: identificator of the blackbox test session
+1: the first student into checksum directory
+000: the version submitted by student 1
+
+
+the first experiment was choiced the fisrt submission - student 1
+the second experiment was choiced the last submission - student 2

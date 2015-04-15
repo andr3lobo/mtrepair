@@ -1,0 +1,10 @@
+PROTEUM - PROGRAM TEST FILE
+Apr-15-15
+V 2.1 - IM
+              
+smallest
+smallest.exe
+gcc smallest.c -o smallest.exe -w
+Research
+<N O  A N O M A L I E S>
+<A L L   F U N C T I O N S>

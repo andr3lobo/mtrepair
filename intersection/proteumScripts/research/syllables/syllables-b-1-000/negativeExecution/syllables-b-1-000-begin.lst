@@ -1,0 +1,32 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: syllables-b-1-000
+[]----------------------------------------------------------
+[]   SOURCE FILE: syllables
+[]
+[]   TOTAL MUTANTS: 527
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 527
+[]
+[]   ALIVE MUTANTS: 527
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.000000
+[]
+[]   OPERATORS:
+[]   u-Ccsr             18    u-CRCR             90    u-OCNG              2    
+[]   u-OEAA             10    u-OEBA              6    u-OESA              4    
+[]   u-Oido              2    u-OLAN             20    u-OLBN             12    
+[]   u-OLLN              4    u-OLNG             12    u-OLRN             24    
+[]   u-OLSN              8    u-OODL             20    u-ORAN             30    
+[]   u-ORBN             18    u-ORLN             12    u-ORRN             30    
+[]   u-ORSN             12    u-SMTC              1    u-SMTT              1    
+[]   u-SMVB              1    u-SRSR             10    u-SSDL             11    
+[]   u-STRI              2    u-STRP             11    u-VDTR             54    
+[]   u-VLSR             54    u-VTWD             36    u-VVDL             12    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]

@@ -1,0 +1,174 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: digits-b-1-000
+[]----------------------------------------------------------
+[]   SOURCE FILE: digits
+[]
+[]   TOTAL MUTANTS: 606
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 606
+[]
+[]   ALIVE MUTANTS: 68
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.887789
+[]
+[]   OPERATORS:
+[]   u-Cccr             18    u-CCDL              5    u-Ccsr             42    
+[]   u-CRCR             76    u-OAAN              4    u-OABN              3    
+[]   u-OALN              2    u-OARN              6    u-OASN              2    
+[]   u-OCNG              5    u-OEAA             30    u-OEBA             18    
+[]   u-OESA             12    u-Oido              2    u-OLAN              5    
+[]   u-OLBN              3    u-OLLN              1    u-OLNG              3    
+[]   u-OLRN              6    u-OLSN              2    u-OODL             16    
+[]   u-ORAN             30    u-ORBN             18    u-ORLN             12    
+[]   u-ORRN             30    u-ORSN             12    u-SBRC              1    
+[]   u-SMTC              2    u-SMTT              2    u-SMVB              2    
+[]   u-SRSR             22    u-SSDL             25    u-STRI              6    
+[]   u-STRP             25    u-VDTR             48    u-VLSR             69    
+[]   u-VTWD             32    u-VVDL              9    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 407
+	Number of Mutants Dead by Retcode : 91
+	Number of Mutants Dead by Timeout: 3
+	Number of Mutants Dead by Trap: 37
+	Number of Mutants Avoided: 68
+	Number of Dead Mutants: 538
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 1234 
+	Input:
+
+	Output:
+
+Enter an integer > 
+@
+
+ð
+That's all, have a nice day!
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 2
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 410
+	Number of Mutants Dead by Retcode : 90
+	Number of Mutants Dead by Timeout: 2
+	Number of Mutants Dead by Trap: 36
+	Number of Mutants Avoided: 68
+	Number of Dead Mutants: 538
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: -9876 
+	Input:
+
+	Output:
+
+Enter an integer > 
+@
+
+ð
+That's all, have a nice day!
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 3
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 411
+	Number of Mutants Dead by Retcode : 87
+	Number of Mutants Dead by Timeout: 3
+	Number of Mutants Dead by Trap: 37
+	Number of Mutants Avoided: 68
+	Number of Dead Mutants: 538
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 3730272 
+	Input:
+
+	Output:
+
+Enter an integer > 
+@
+
+ð
+That's all, have a nice day!
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 4
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 415
+	Number of Mutants Dead by Retcode : 86
+	Number of Mutants Dead by Timeout: 3
+	Number of Mutants Dead by Trap: 34
+	Number of Mutants Avoided: 68
+	Number of Dead Mutants: 538
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 89374 
+	Input:
+
+	Output:
+
+Enter an integer > 
+@
+
+ð
+That's all, have a nice day!
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 5
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 415
+	Number of Mutants Dead by Retcode : 83
+	Number of Mutants Dead by Timeout: 3
+	Number of Mutants Dead by Trap: 37
+	Number of Mutants Avoided: 68
+	Number of Dead Mutants: 538
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 6666666 
+	Input:
+
+	Output:
+
+Enter an integer > 
+@
+
+ð
+That's all, have a nice day!
+	Stderr:
+
+_________________________________________________

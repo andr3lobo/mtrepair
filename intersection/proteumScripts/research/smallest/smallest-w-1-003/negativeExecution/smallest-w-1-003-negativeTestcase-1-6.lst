@@ -1,0 +1,173 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: smallest-w-1-003
+[]----------------------------------------------------------
+[]   SOURCE FILE: smallest
+[]
+[]   TOTAL MUTANTS: 897
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 897
+[]
+[]   ALIVE MUTANTS: 633
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.294314
+[]
+[]   OPERATORS:
+[]   u-Ccsr             28    u-CRCR            140    u-OCNG              4    
+[]   u-OLAN             40    u-OLBN             24    u-OLLN              8    
+[]   u-OLNG             24    u-OLRN             48    u-OLSN             16    
+[]   u-OODL             40    u-ORAN             60    u-ORBN             36    
+[]   u-ORLN             24    u-ORRN             60    u-ORSN             24    
+[]   u-SRSR             15    u-SSDL             19    u-STRI              8    
+[]   u-STRP             19    u-VDTR             84    u-VLSR             96    
+[]   u-VTWD             56    u-VVDL             24    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 247
+	Number of Mutants Dead by Retcode : 5
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 12
+	Number of Mutants Avoided: 633
+	Number of Dead Mutants: 264
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 0 0 0 0 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -1486802784 is the smallest
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 2
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 248
+	Number of Mutants Dead by Retcode : 4
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 12
+	Number of Mutants Avoided: 633
+	Number of Dead Mutants: 264
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 0 0 1 2 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -1331213696 is the smallest
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 3
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 250
+	Number of Mutants Dead by Retcode : 4
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 10
+	Number of Mutants Avoided: 633
+	Number of Dead Mutants: 264
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 0 0 1 0 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -230263920 is the smallest
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 4
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 249
+	Number of Mutants Dead by Retcode : 3
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 12
+	Number of Mutants Avoided: 633
+	Number of Dead Mutants: 264
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 0 0 3 1 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -1637723760 is the smallest
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 5
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 247
+	Number of Mutants Dead by Retcode : 5
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 12
+	Number of Mutants Avoided: 633
+	Number of Dead Mutants: 264
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 0 1 0 0 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -1649530416 is the smallest
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 6
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 251
+	Number of Mutants Dead by Retcode : 3
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 10
+	Number of Mutants Avoided: 633
+	Number of Dead Mutants: 264
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 0 1 1 0 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -290757600 is the smallest
+
+	Stderr:
+
+_________________________________________________

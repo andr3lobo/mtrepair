@@ -1,0 +1,203 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: grade-b-2-004
+[]----------------------------------------------------------
+[]   SOURCE FILE: grade
+[]
+[]   TOTAL MUTANTS: 489
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 489
+[]
+[]   ALIVE MUTANTS: 426
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.128834
+[]
+[]   OPERATORS:
+[]   u-CRCR             98    u-OCNG              4    u-OLAN             15    
+[]   u-OLBN              9    u-OLLN              3    u-OLNG              9    
+[]   u-OLRN             18    u-OLSN              6    u-OODL             20    
+[]   u-ORAN             28    u-ORLN             14    u-ORRN             35    
+[]   u-SRSR             20    u-SSDL             21    u-STRI              8    
+[]   u-STRP             21    u-VDTR             42    u-VLSR             76    
+[]   u-VTWD             28    u-VVDL             14    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 67
+	Number of Mutants Dead by Stdout: 41
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 54
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 2
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 66
+	Number of Mutants Dead by Stdout: 42
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 55
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 3
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 67
+	Number of Mutants Dead by Stdout: 41
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 54
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 4
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 69
+	Number of Mutants Dead by Stdout: 39
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 52
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 5
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 68
+	Number of Mutants Dead by Stdout: 40
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 53
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 6
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 66
+	Number of Mutants Dead by Stdout: 42
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 55
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 7
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 69
+	Number of Mutants Dead by Stdout: 39
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 13
+	Number of Mutants Avoided: 368
+	Number of Dead Mutants: 52
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 80 70 60 50 
+	Input:
+
+	Output:
+Enter thresholds for A, B, C, D
+in that order, decreasing percentages > Thank you. Now enter student score (percent) > Stdent has an A grade
+
+	Stderr:
+
+_________________________________________________

@@ -1,0 +1,75 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: smallest-w-2-008
+[]----------------------------------------------------------
+[]   SOURCE FILE: smallest
+[]
+[]   TOTAL MUTANTS: 682
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 682
+[]
+[]   ALIVE MUTANTS: 63
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.907625
+[]
+[]   OPERATORS:
+[]   u-Ccsr             22    u-CRCR            110    u-OCNG              3    
+[]   u-OLAN             30    u-OLBN             18    u-OLLN              6    
+[]   u-OLNG             18    u-OLRN             36    u-OLSN             12    
+[]   u-OODL             30    u-ORAN             45    u-ORBN             27    
+[]   u-ORLN             18    u-ORRN             45    u-ORSN             18    
+[]   u-SRSR             10    u-SSDL             11    u-STRI              6    
+[]   u-STRP             11    u-VDTR             66    u-VLSR             78    
+[]   u-VTWD             44    u-VVDL             18    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 0
+	Number of Mutants Dead by Stdout: 235
+	Number of Mutants Dead by Retcode : 2
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 10
+	Number of Mutants Avoided: 435
+	Number of Dead Mutants: 247
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 0 1 1 1 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > -931187088 is the smallest 
+	Stderr:
+
+_________________________________________________
+
+
+Teste Case # 2
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 35
+	Number of Mutants Dead by Stdout: 575
+	Number of Mutants Dead by Retcode : 7
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 20
+	Number of Mutants Avoided: 45
+	Number of Dead Mutants: 602
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 0 1 3 1 
+	Input:
+
+	Output:
+Please enter 4 numbers separated by spaces > 0 is the smallest
+	Stderr:
+
+_________________________________________________

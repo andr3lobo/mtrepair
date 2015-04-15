@@ -1,0 +1,12 @@
+
+@__bswap_32
+     __builtin_bswap32
+
+
+@__bswap_64
+     __builtin_bswap64
+
+
+@main
+     printf              scanf               strlen
+

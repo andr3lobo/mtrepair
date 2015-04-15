@@ -1,0 +1,55 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: digits-w-2-002
+[]----------------------------------------------------------
+[]   SOURCE FILE: digits
+[]
+[]   TOTAL MUTANTS: 91
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 91
+[]
+[]   ALIVE MUTANTS: 54
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.406593
+[]
+[]   OPERATORS:
+[]   u-Cccr              3    u-CCDL              1    u-Ccsr              4    
+[]   u-CRCR             10    u-OAAA              4    u-OAAN              4    
+[]   u-OABA              3    u-OABN              3    u-OAEA              1    
+[]   u-OALN              2    u-OARN              6    u-OASA              2    
+[]   u-OASN              2    u-OCNG              1    u-OODL              3    
+[]   u-SMTC              1    u-SMTT              1    u-SMVB              2    
+[]   u-SRSR              8    u-SSDL              9    u-STRP              9    
+[]   u-SWDD              1    u-VDTR              6    u-VTWD              4    
+[]   u-VVDL              1    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 5
+	Number of Mutants Dead by Stdout: 23
+	Number of Mutants Dead by Retcode : 0
+	Number of Mutants Dead by Timeout: 2
+	Number of Mutants Dead by Trap: 12
+	Number of Mutants Avoided: 49
+	Number of Dead Mutants: 37
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 11
+	Retorn Code: 0
+	Parameters: 0 
+	Input:
+
+	Output:
+Enter an integer > 
+That's all, have a nice day!
+
+	Stderr:
+
+_________________________________________________

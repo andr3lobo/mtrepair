@@ -1,0 +1,52 @@
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[]
+[]                  PROGRAM TESTE: median-b-1-000
+[]----------------------------------------------------------
+[]   SOURCE FILE: median
+[]
+[]   TOTAL MUTANTS: 845
+[]
+[]   ANOMALOUS MUTANTS: 0
+[]
+[]   ACTIVE MUTANTS: 845
+[]
+[]   ALIVE MUTANTS: 110
+[]
+[]   EQUIVALENT MUTANTS: 0
+[]
+[]   MUTATION SCORE: 0.869823
+[]
+[]   OPERATORS:
+[]   u-Ccsr             27    u-CRCR            135    u-OCNG              3    
+[]   u-OLAN             45    u-OLBN             27    u-OLLN              9    
+[]   u-OLNG             27    u-OLRN             54    u-OLSN             18    
+[]   u-OODL             42    u-ORAN             60    u-ORBN             36    
+[]   u-ORLN             24    u-ORRN             60    u-ORSN             24    
+[]   u-SRSR              9    u-SSDL             10    u-STRI              6    
+[]   u-STRP             10    u-VDTR             81    u-VLSR             60    
+[]   u-VTWD             54    u-VVDL             24    
+[]
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+Teste Case # 1
+	Number of Not Executed Mutants: 0
+	Number of Alive Mutants: 68
+	Number of Mutants Dead by Stdout: 695
+	Number of Mutants Dead by Retcode : 18
+	Number of Mutants Dead by Timeout: 0
+	Number of Mutants Dead by Trap: 22
+	Number of Mutants Avoided: 42
+	Number of Dead Mutants: 735
+	Enabled
+	CPU Execution Time (1/100 sec.): 10
+	Total Execution Time (1/100 sec.): 10
+	Retorn Code: 0
+	Parameters: 9 9 9 
+	Input:
+
+	Output:
+Please enter 3 numbers separated by spaces > 
+	Stderr:
+
+_________________________________________________
