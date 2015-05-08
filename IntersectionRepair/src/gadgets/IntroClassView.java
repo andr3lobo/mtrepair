@@ -65,15 +65,11 @@ public class IntroClassView {
             HashMap<String,List<String>> students = new HashMap<>();
             for (String stdName: studentNames){
                 List<String> programVersions = getDirectories(stdName, "bla");
-                Collections.sort(programVersions, Collections.reverseOrder());
-                printList(programVersions);
+                Collections.sort(programVersions);
                 
-                if (hasCorrectVersion(programVersions)){
-                    List<String> versions = new ArrayList<>();
-                    versions.add(programVersions.get(programVersions.size()-1));
-                    versions.add(programVersions.get(programVersions.size()-2));
+                List<String> versions = getVersions(programVersions);
+                if (versions.size()>0)
                     students.put(stdName, versions);
-                }
             }
             this.dirMap.put(bchName, students);
         }
@@ -86,19 +82,26 @@ public class IntroClassView {
      * i)the correct version and ii) the immediately previous version )
      * @param programVersions is a list with directories names of the 
      *  specific student
-     * @return true the student has a correct version or false otherwise
+     * @return one string list with two elements: i) a bug version path and
+     *  ii) a correct version path
      */
-    private boolean hasCorrectVersion(List<String> programVersions) {
-        boolean has = false;
+    private List<String> getVersions(List<String> programVersions) {
+        List<String> versions = new ArrayList<>();
         
-        List<String> files1 = getFiles(programVersions.get(0));
-        List<String> files2 = getFiles(programVersions.get(1));
-        
-        if (!files1.contains("gp-001.log") && files2.contains("gp-001.log")) {
-            has=true;
+        for (int i=0;i<programVersions.size()-1;i++){
+            
+            List<String> files1 = getFiles(programVersions.get(i));
+            List<String> files2 = getFiles(programVersions.get(i+1));
+
+            if (files1.contains("gp-001.log") && !files2.contains("gp-001.log")) {
+                versions.add(programVersions.get(i));
+                versions.add(programVersions.get(i+1));
+                break;
+            }
         }
         
-        return has;
+        return versions;
+        
     }    
     
     /**

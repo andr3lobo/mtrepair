@@ -5,6 +5,8 @@
  */
 package App;
 
+import gadgets.IntroClassView;
+
 /**
  *
  * @author andrelobo
@@ -15,7 +17,10 @@ public class MTRepair {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        IntroClassView view = new IntroClassView("/home/andrelobo/NetBeansProjects/mtrepair/IntroClass");
+        view.loadBenchNames();
+        view.loadDirMap();
     }
     
 }
