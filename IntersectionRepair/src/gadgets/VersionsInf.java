@@ -27,7 +27,6 @@ public class VersionsInf {
     
     public VersionsInf(){};
     
-    
     public List<String> searchNegativeTC(String path, String testType) throws FileNotFoundException, IOException{
         
         BufferedReader buffWhite = new BufferedReader(new FileReader(path+"/"+testType+"_test.sh"));
@@ -51,6 +50,14 @@ public class VersionsInf {
         return negTC;
     }
     
+    void printInformations() {
+        System.out.println(""
+                + "--------------------------------------------------\n"
+                + "correct version: " + this.getCorrectVersion() + "\n"
+                + "bugged version: " + this.getBuggedVersion() + "\n"
+                + "negativeTestCasesBlackBox: " + this.getNtcB() + "\n"
+                + "negativeTestCaseWhiteBox: " + this.getNtcW() + "\n");        
+    }
     
     public String getCorrectVersion() {
         return correctVersion;
@@ -83,8 +90,5 @@ public class VersionsInf {
     public void setNtcB(List<String> ntcB) {
         this.ntcB = ntcB;
     }
-    
-    
-    
     
 }

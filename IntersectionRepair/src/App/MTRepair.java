@@ -19,9 +19,10 @@ public class MTRepair {
      */
     public static void main(String[] args) throws IOException {
 
-        IntroClassView view = new IntroClassView("/home/andrelobo/NetBeansProjects/mtrepair/IntroClass");
+        IntroClassView view = new IntroClassView("../IntroClass");
         view.loadBenchNames();
         view.loadDirMap();
+        view.runMutations();
     }
     
 }

@@ -6,7 +6,9 @@
 package gadgets;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -69,7 +71,7 @@ public class IntroClassView {
             HashMap<String,VersionsInf> students = new HashMap<>();
             
             for (String stdName: studentNames){
-                List<String> programVersions = getDirectories(stdName, "blah");
+                List<String> programVersions = getDirectories(stdName, "TestSessions");
                 Collections.sort(programVersions);
                 
                 VersionsInf versions =  getVersions(programVersions);
@@ -77,12 +79,6 @@ public class IntroClassView {
                 //if the result is null, not load the local HashMap
                 if (versions != null){
                     students.put(stdName, versions);
-//                    System.out.println(""
-//                            + "--------------------------------------------------\n"
-//                            + "correct version: " + versions.getCorrectVersion() + "\n"
-//                            + "bugged version: " + versions.getBuggedVersion() + "\n"
-//                            + "negativeTestCasesBlackBox: " + versions.getNtcB() + "\n"
-//                            + "negativeTestCaseWhiteBox: " + versions.getNtcW() + "\n");
                 }
             }
             
@@ -97,8 +93,7 @@ public class IntroClassView {
      * i)the correct version and ii) the immediately previous version )
      * @param programVersions is a list with directories names of the 
      *  specific student
-     * @return one string list with two elements: i) a bug version path and
-     *  ii) a correct version path
+     * @return the VersionsInf class
      */
     private VersionsInf getVersions(List<String> programVersions) throws IOException {
         
@@ -183,7 +178,7 @@ public class IntroClassView {
              paths.add(subdir.getPath());
             String[] str = paths.get(paths.size()-1).split("/");
             if (!noDir.equals(str[str.length - 1]))
-            subPaths.add(subdir.getPath());
+                subPaths.add(subdir.getPath());
         }
         return subPaths;
     }
@@ -210,7 +205,109 @@ public class IntroClassView {
         for (Object elem : list) {
             System.out.println(elem+"  ");
         }
-}
+    }
+    
+    public void runMutations() throws IOException {
+        createDirectoryStructure();
+        executeMutations();
+        
+    }
+    
+    /**
+         * 1 - create a directory structure.
+         *  In this case, I should erase any directory if it there is.
+         *  To follow:
+            Structure: /inside path with
+                     * versions submitted by student/ "given from my program" to create
+                     * following directories structure:
+                     * 
+                     * TestSessions/
+                     *
+                     *      negativeTC/
+                     *          "directory with the program copy" negative/ "directory
+                     *          with the test cases copied by my java program"
+                     * 
+                     *      positiveTC/
+                     *          "directory with the program copy" positive/ "directory
+                     *          with the test cases copied by my java program"
+                     *
+                     *      intersection/
+                     *          negative/ "directory with the test cases copied by my
+                     *          java program"
+                     
+         * 2 - The copy files.
+         *  I should to copy files:
+         *      i) program that will be mutated (bugged version) to positive and 
+         *         negative directory
+         *      ii) poll of the test cases (negative or positive)
+    */    
+    public void createDirectoryStructure() throws IOException {
+        /*//TO-DO*/
+        for (String benchName : this.benchNames) {
+            List<String> students = new ArrayList<>();
+            
+            //here, I get all students that have been submitted with benchmark bench
+            students.addAll(this.dirMap.get(benchName).keySet());
+            
+            //root is submissions directory for a specific student
+            for (String root: students){
+                String t = root;
+                root= root+"/TestSessions";
+                
+                if(new File(root).exists())
+                    this.delete(new File(root));
+                String positiveTC = root+"//positiveTC";
+                String negativeTC = root+"//negative";
+                String intersection = root+"//intersection";
+                new File(root).mkdirs();
+                new File(positiveTC).mkdirs();
+                new File(negativeTC).mkdirs();
+                new File(intersection).mkdirs();
+                
+                this.dirMap.get(benchName).get(t).printInformations();
+                
+            }
+        }        
+        
+    }
 
+/**
+ * 1) Creating the test session with whole operators:
+ * ../ProteumScripts/CreatingTestSession.pl <dir where test sessions is located> research <compiled name program> <test session name>
+ *  <dir where test sessions is located>: in my case, is the directory created by me for each test session (positive, negative and intersection test sessions)
+    *Ex.:* /inside path with versions submitted by student/TestSessions/positiveTC/
+ *  <compiled name program>: in my case, is the benchmark name in my hash
+ *  <compiled name program>: in my case, is the benchmark name in my hash
+ *  <test session name>: in my case, it can has the name that I want
+ * Obs.: <dir where test sessions is located> in this case, into directory <dir where test sessions is located> should have a directoty with the same name of the program under test (<compiled name program>). Inside of this directory should have a directory with the same name of test session name. Now, we are into a directory to execute the scripts that should:
+ *      i) has a program under test (copy the program inside this directory
+ *      ii) a directory with the pool of test case that will execute the mutants
+            * Ex.:*
+            *   positive (for /TestSessions/positiveTC/)
+            *   negative (for /TestSessions/negativeTC/)
+            *   negative (for /TestSessions/intersection/)
+            *       in this case, will be a copy of the /TestSessions/negativeTC/
 
+* 2) Importing and executing whole test cases:
+* ../ProteumScripts/ImportingExecutingTestSet.pl <dir where test sessions is located> <directory name of the pool test cases> poke 1 x <compiled name program> <test session name>
+
+*/    
+    private void executeMutations() {
+        /*//TO-DO*/
+        /**
+         * 1 - create test sessions and execute mutations
+         */
+    }
+    
+    void delete(File f) throws IOException {
+        if (f.isDirectory()) {
+            for (File c : f.listFiles()) {
+                delete(c);
+            }
+        }
+        if (!f.delete()) {
+            throw new FileNotFoundException("Failed to delete file: " + f);
+        }
+    }    
+    
 }
