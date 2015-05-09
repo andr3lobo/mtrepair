@@ -6,6 +6,7 @@
 package App;
 
 import gadgets.IntroClassView;
+import java.io.IOException;
 
 /**
  *
@@ -16,7 +17,7 @@ public class MTRepair {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         IntroClassView view = new IntroClassView("/home/andrelobo/NetBeansProjects/mtrepair/IntroClass");
         view.loadBenchNames();

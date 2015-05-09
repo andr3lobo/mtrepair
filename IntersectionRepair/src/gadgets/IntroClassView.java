@@ -6,10 +6,10 @@
 package gadgets;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -20,14 +20,17 @@ public class IntroClassView {
     
     public List<String> benchNames;//The list with the benchmarks names 
     public String path;
+    // what is the list of test
+    //what are the negative test cases
+    //what are the positive test cases
     
     /**
-     * This hash has the directory tree of ItroClass benchmark
+     * This hash has the directory tree of IntroClass benchmark
      * To browse in dirMap structure is essential for create
      * the test sessions, to choice the version to be investigated, etc
-     * HashMap <benchName, HashMap <studentName, list of directory versions of student>
+     * HashMap <benchName, HashMap <studentName, VersionsInf class>
      */
-    public HashMap <String,HashMap <String, List<String>>> dirMap = new HashMap<>();
+    public HashMap <String,HashMap <String, VersionsInf>> dirMap = new HashMap<>();
     
     /**
      * Constructing a view class from a given benchmark path
@@ -55,22 +58,34 @@ public class IntroClassView {
        
     /**
      * This method help to load the hashMap dirMap
+     * @throws java.io.IOException
      */
-    public void loadDirMap(){
+    public void loadDirMap() throws IOException{
         
         for (String bchName : this.benchNames){
             List<String> studentNames = getDirectories(this.path + 
                     "/"+bchName,"tests");
             
-            HashMap<String,List<String>> students = new HashMap<>();
+            HashMap<String,VersionsInf> students = new HashMap<>();
+            
             for (String stdName: studentNames){
-                List<String> programVersions = getDirectories(stdName, "bla");
+                List<String> programVersions = getDirectories(stdName, "blah");
                 Collections.sort(programVersions);
                 
-                List<String> versions = getVersions(programVersions);
-                if (versions.size()>0)
+                VersionsInf versions =  getVersions(programVersions);
+                
+                //if the result is null, not load the local HashMap
+                if (versions != null){
                     students.put(stdName, versions);
+//                    System.out.println(""
+//                            + "--------------------------------------------------\n"
+//                            + "correct version: " + versions.getCorrectVersion() + "\n"
+//                            + "bugged version: " + versions.getBuggedVersion() + "\n"
+//                            + "negativeTestCasesBlackBox: " + versions.getNtcB() + "\n"
+//                            + "negativeTestCaseWhiteBox: " + versions.getNtcW() + "\n");
+                }
             }
+            
             this.dirMap.put(bchName, students);
         }
     }
@@ -85,23 +100,70 @@ public class IntroClassView {
      * @return one string list with two elements: i) a bug version path and
      *  ii) a correct version path
      */
-    private List<String> getVersions(List<String> programVersions) {
-        List<String> versions = new ArrayList<>();
+    private VersionsInf getVersions(List<String> programVersions) throws IOException {
         
-        for (int i=0;i<programVersions.size()-1;i++){
+        VersionsInf verInf = new VersionsInf();//to verify correted version
+        VersionsInf vInf = new VersionsInf();//to verify bugged version
+        
+        //indexes to locate last and previous versions
+        int lastVersion = programVersions.size() - 1;
+        int previousVersion = programVersions.size() - 2;
+        
+        List<String> negTCB
+                = verInf.searchNegativeTC(programVersions.get(lastVersion), "blackbox");
+        List<String> negTCW 
+                = verInf.searchNegativeTC(programVersions.get(lastVersion),"whitebox");
+        
+        //if there is the possibility for some version corrected
+        if (negTCB.isEmpty() || negTCW.isEmpty()){
             
-            List<String> files1 = getFiles(programVersions.get(i));
-            List<String> files2 = getFiles(programVersions.get(i+1));
-
-            if (files1.contains("gp-001.log") && !files2.contains("gp-001.log")) {
-                versions.add(programVersions.get(i));
-                versions.add(programVersions.get(i+1));
-                break;
+            //if both version are correct in last version submission, verify in previous submission
+            if (negTCB.isEmpty() && negTCW.isEmpty()){
+                negTCB.addAll(verInf.searchNegativeTC(
+                        programVersions.get(previousVersion), "blackbox"));
+                
+                negTCW.addAll(verInf.searchNegativeTC(
+                        programVersions.get(previousVersion), "whitebox"));
+                
+                //if both has negative test case
+                if (!negTCB.isEmpty() && !negTCW.isEmpty()){
+                    vInf.setNtcB(negTCB);
+                    vInf.setNtcW(negTCW);
+                    
+                //if negTCB is not empty
+                } else if (!negTCB.isEmpty() && negTCW.isEmpty()){
+                    vInf.setNtcB(negTCB);
+                
+                //if negTCW is not empty
+                } else if (negTCB.isEmpty() && !negTCW.isEmpty()){
+                    vInf.setNtcW(negTCW);
+                }
+              
+              //if only negTCB is not empty, verify only whitebox test
+            } else if(!negTCB.isEmpty() && negTCW.isEmpty()){
+                negTCW.addAll(verInf.searchNegativeTC(
+                        programVersions.get(previousVersion), "whitebox"));
+                if (!negTCW.isEmpty())
+                    vInf.setNtcW(negTCW);
+              
+              //if only negTCW is not empty, verify only blackbox test
+            } else if (negTCB.isEmpty() && !negTCW.isEmpty()){
+                negTCB.addAll(verInf.searchNegativeTC(
+                        programVersions.get(previousVersion), "blackbox"));                
+                if (!negTCB.isEmpty())
+                    vInf.setNtcB(negTCB);            
             }
-        }
-        
-        return versions;
-        
+             
+            //always the correct version will be the last
+            vInf.setCorrectVersion(programVersions.get(lastVersion));
+            //always the bugged version will be the previous
+            vInf.setBuggedVersion(programVersions.get(previousVersion));            
+            
+            return vInf;
+            
+        } else {
+            return null;
+        }        
     }    
     
     /**
@@ -145,8 +207,7 @@ public class IntroClassView {
     }    
     
     public void printList(List<?> list){
-        for (Iterator<?> it = list.iterator(); it.hasNext();) {
-            Object elem = it.next();
+        for (Object elem : list) {
             System.out.println(elem+"  ");
         }
 }
