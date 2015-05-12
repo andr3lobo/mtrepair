@@ -5,6 +5,7 @@
  */
 package gadgets;
 
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -13,6 +14,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -78,7 +83,14 @@ public class IntroClassView {
                 
                 //if the result is null, not load the local HashMap
                 if (versions != null){
-                    students.put(stdName, versions);
+                    
+                    versions.setBenchName(bchName);
+                    versions.setStudent(stdName);
+                    versions.setTestType();
+                    
+                    if (versions.getTestType()!=null){
+                        students.put(stdName, versions);
+                    }
                 }
             }
             
@@ -241,7 +253,7 @@ public class IntroClassView {
          *         negative directory
          *      ii) poll of the test cases (negative or positive)
     */    
-    public void createDirectoryStructure() throws IOException {
+    public void createDirectoryStructure() {
         /*//TO-DO*/
         for (String benchName : this.benchNames) {
             List<String> students = new ArrayList<>();
@@ -251,25 +263,185 @@ public class IntroClassView {
             
             //root is submissions directory for a specific student
             for (String root: students){
-                String t = root;
+                String std = root;
                 root= root+"/TestSessions";
                 
                 if(new File(root).exists())
-                    this.delete(new File(root));
-                String positiveTC = root+"//positiveTC";
-                String negativeTC = root+"//negative";
-                String intersection = root+"//intersection";
+                    try {
+                        this.delete(new File(root));
+                } catch (IOException ex) {
+                    Logger.getLogger(IntroClassView.class.getName()).log(Level.SEVERE, null, ex);
+                        System.out.println("Error to delete this directory: \n "+ root );
+                }
+                String positiveTC = "//positiveTC//positive";
+                String negativeTC = "//negativeTC//negative";
+                String intersection = "//intersection//negative";
                 new File(root).mkdirs();
-                new File(positiveTC).mkdirs();
-                new File(negativeTC).mkdirs();
-                new File(intersection).mkdirs();
+                new File( root+"//blackbox"+positiveTC).mkdirs();
+                new File( root+"//blackbox"+negativeTC).mkdirs();
+                new File( root+"//blackbox"+intersection).mkdirs();
                 
-                this.dirMap.get(benchName).get(t).printInformations();
+                new File( root+"//whitebox"+positiveTC).mkdirs();
+                new File( root+"//whitebox"+negativeTC).mkdirs();
+                new File( root+"//whitebox"+intersection).mkdirs();
+                
+                VersionsInf version = this.dirMap.get(benchName).get(std);
+                this.dirMap.get(benchName).get(std).printInformations();
+                
+                buildTestSessionFiles(version);
+                
+                
                 
             }
         }        
         
     }
+    
+    private void buildTestSessionFiles(VersionsInf version) {
+        copyPrograms(version);
+    }    
+
+    private void copyPrograms(VersionsInf version) {
+        //to copy programs
+        File origin, destPos, destNeg;
+        switch (version.getTestType()){
+            case "both":
+                //blackbox
+                origin = new File(version.getBuggedVersion() + "/" + version.getBenchName() + ".c");
+                destPos = new File(version.getStudent() + "/TestSessions/blackbox/positiveTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destPos);
+                
+                destNeg = new File(version.getStudent() + "/TestSessions/blackbox/negativeTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destNeg);
+                
+                //test cases for blackbox test
+                copyTestCases(version,"blackbox");
+                
+                //whitebox
+                origin = new File(version.getBuggedVersion() + "/" + version.getBenchName() + ".c");
+                destPos = new File(version.getStudent() + "/TestSessions/whitebox/positiveTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destPos);
+                
+                destNeg = new File(version.getStudent() + "/TestSessions/whitebox/negativeTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destNeg);
+                
+                //test cases for whitebox test
+                copyTestCases(version,"whitebox");
+                
+                break;
+                
+            case "blackbox":
+                //blackbox
+                origin = new File(version.getBuggedVersion() + "/" + version.getBenchName() + ".c");
+                destPos = new File(version.getStudent() + "/TestSessions/blackbox/positiveTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destPos);
+                
+                destNeg = new File(version.getStudent() + "/TestSessions/blackbox/negativeTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destNeg);
+                
+                //test cases for blackbox test
+                copyTestCases(version,"blackbox");
+                
+                break;
+            case "whitebox":
+                //whitebox
+                origin = new File(version.getBuggedVersion() + "/" + version.getBenchName() + ".c");
+                destPos = new File(version.getStudent() + "/TestSessions/whitebox/positiveTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destPos);
+
+                destNeg = new File(version.getStudent() + "/TestSessions/whitebox/negativeTC/" + version.getBenchName() + ".c");
+                copyFile(origin, destNeg);
+                
+                //test cases for whitebox test
+                copyTestCases(version,"whitebox");                
+                break;
+
+        }
+        
+
+        
+    }    
+    
+//            if (m.find()){
+//                switch (typeTest){
+//                    case "blackbox":
+//                        
+//                        //negative
+//                        File dest = new File(version.getStudent()+"/TestSessions/blackbox/negativeTC/negative/");
+//                        
+//                        
+//                        //positive
+//                        
+//                        
+//                        break;
+//                        
+//                    case "whitebox":
+//                        
+//                        break;
+//                }    
+    
+    private void copyTestCases(VersionsInf version, String typeTest) {
+        String pathTC = "../IntroClass/"+version.getBenchName()+"/tests/"+typeTest+"/";
+        
+        List<String> files = getFiles(pathTC);
+        int count_ptc=0,count_ntc=0;
+        
+        for (String file : files ){
+            Pattern p = Pattern.compile("\\d+\\.in");
+            Matcher m = p.matcher(file);
+            
+            if (m.find()){//to meet the pattern
+                File origin = new File(pathTC+file);
+                
+                //blackbox
+                if ("blackbox".equals(typeTest)){//in this case, it only can be white or blackbox
+                    
+                    if (version.getNtcB().contains(file)){//verifying if the test case is negative or positive
+                        count_ntc++;//tc is negative
+                        File dest = new File(version.getStudent()+"/TestSessions/blackbox/negativeTC/negative/"
+                                +"input"+count_ntc+".tes");
+                        copyFile(origin, dest);
+                        
+                        //copying to intersection
+                        dest = new File(version.getStudent() + "/TestSessions/blackbox/intersection/negative/"
+                                + "input" + count_ntc + ".tes");                        
+                        copyFile(origin, dest);
+                        
+                    } else {
+                        count_ptc++;//tc is positive
+                        File dest = new File(version.getStudent() + "/TestSessions/blackbox/positiveTC/positive/"
+                                + "input" + count_ptc + ".tes");
+                        copyFile(origin, dest);
+                    }
+                    
+                } else {//whitebox
+                    
+                    if (version.getNtcW().contains(file)) {//verifying if the test case is negative or positive
+                        count_ntc++;//tc is negative
+                        File dest = new File(version.getStudent() + "/TestSessions/whitebox/negativeTC/negative/"
+                                + "input" + count_ntc + ".tes");
+                        copyFile(origin, dest);
+                        
+                        //copying to intersection
+                        dest = new File(version.getStudent() + "/TestSessions/whitebox/intersection/negative/"
+                                + "input" + count_ntc + ".tes");                        
+                        copyFile(origin, dest);                        
+
+                    } else {
+                        count_ptc++;//tc is positive
+                        File dest = new File(version.getStudent() + "/TestSessions/whitebox/positiveTC/positive/"
+                                + "input" + count_ptc + ".tes");
+                        copyFile(origin, dest);
+                    }                    
+                    
+                } 
+                
+            }
+            
+        }
+        
+    }
+        
 
 /**
  * 1) Creating the test session with whole operators:
@@ -308,6 +480,21 @@ public class IntroClassView {
         if (!f.delete()) {
             throw new FileNotFoundException("Failed to delete file: " + f);
         }
-    }    
+    }
     
+    private static void copyFile(File source, File dest) {
+        try {
+            Files.copy(source.toPath(), dest.toPath());
+        } catch (IOException ex) {
+            Logger.getLogger(IntroClassView.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error to copy the file from: \n"+ 
+                    source.getPath()+"\n"
+            + "to: \n"
+            + dest.getPath());
+        }
+    }
+
+
+
+
 }

@@ -22,6 +22,9 @@ public class VersionsInf {
     
     public String correctVersion;//directory path to correct version
     public String buggedVersion;//diretory path to bugged version
+    public String student;
+    public String benchName;
+    public String testType;
     List<String> ntcW = new ArrayList<>();//list with name of negative test case white box
     List<String> ntcB = new ArrayList<>();//list with name of positive test case black box
     
@@ -53,10 +56,13 @@ public class VersionsInf {
     void printInformations() {
         System.out.println(""
                 + "--------------------------------------------------\n"
+                + "benchmark: "+this.benchName+"\n"
                 + "correct version: " + this.getCorrectVersion() + "\n"
                 + "bugged version: " + this.getBuggedVersion() + "\n"
                 + "negativeTestCasesBlackBox: " + this.getNtcB() + "\n"
-                + "negativeTestCaseWhiteBox: " + this.getNtcW() + "\n");        
+                + "negativeTestCaseWhiteBox: " + this.getNtcW() + "\n"
+                + "test type: "+this.testType
+        );        
     }
     
     public String getCorrectVersion() {
@@ -90,5 +96,35 @@ public class VersionsInf {
     public void setNtcB(List<String> ntcB) {
         this.ntcB = ntcB;
     }
+
+    public String getStudent() {
+        return student;
+    }
+
+    public void setStudent(String student) {
+        this.student = student;
+    }
+
+    public String getTestType() {
+        return testType;
+    }
+
+    public void setTestType() {
+        if (!this.ntcB.isEmpty() && !this.ntcW.isEmpty()){
+            this.testType="both";
+        } else if (!this.ntcB.isEmpty() && this.ntcW.isEmpty()){
+            this.testType="blackbox";
+        } else if (this.ntcB.isEmpty() && !this.ntcW.isEmpty()){
+            this.testType="whitebox";
+        }
+    }
+
+    public String getBenchName() {
+        return benchName;
+    }
+
+    public void setBenchName(String benchName) {
+        this.benchName = benchName;
+    }   
     
 }
